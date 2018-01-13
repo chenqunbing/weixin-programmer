@@ -1,0 +1,13 @@
+<import src="../stars/stars-template.wxml" />
+<template name="movieTemplate">
+  <view class='movie-container' catchtap='onMovieTap' data-movieId="{{movieId}}">
+    <!-- <image class='movie-img' src='/images/movies/fanghua.jpg'></image> -->
+    <image class='movie-img' src='{{coverageUrl}}'></image>
+    <text class='movie-title'>{{title}}</text>
+     <!-- <text class='movie-title'>芳华</text> -->
+    <!-- <template is="starsTemplate" data="{{average}}"></template> -->
+
+    <!-- //添加星星之后传入两个变量的形式 -->
+    <template is="starsTemplate" data="{{stars:stars,score:average}}"></template>
+  </view>
+</template>

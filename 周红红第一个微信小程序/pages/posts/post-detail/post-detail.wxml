@@ -1,0 +1,20 @@
+<view class='container'>
+  <image class='bannerImg' src='{{postData1.headImg}}'></image>
+  <image class='audio' catchtap='onMusicTap' src="{{isPlayingMusic?'/images/music-stop.png':'/images/music-start.png'}}"></image>
+  <view class='authour'>
+    <image class='smallImg' src='{{postData1.avatar}}'></image>
+    <text class='msg'>{{postData1.author}}</text>
+    <text class='msg'>发表于</text>
+    <text class='msg'>{{postData1.dateTime}}</text>
+  </view>
+  <text class='title'>{{postData1.title}}</text>
+  <view class='imgBox'>
+    <image wx:if='{{collected}}' catchtap='onCollectionTap'  src='/images/collection.png' class='icon'></image>
+    <image wx:else catchtap='onCollectionTap'  src='/images/collection-anti.png' class='icon'></image>
+     <image catchtap='onShareTap' src='/images/share.png' class='icon'></image> 
+   
+    <view class='line'></view>
+  </view>
+  <text class='content'>{{postData1.detail}}</text>
+</view>
+
